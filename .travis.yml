@@ -1,45 +1,25 @@
 language: python
 python:
-- 3.8
+- 3.4
 
-
-#git:
-#  depth: 5
-
-
-#installation phase
-  #before install
-  #install
- install:
- - pip install -r requirements.txt
- 
-
-#script phase
-  #before script
+#script
+  #before_script
   #script
-  script: 
-  - mkdir shortstory
-  - cd shortstory
-  - touch KKK
-  - echo "It seems it works!"
   
-  #after script
-  
-#after script phase 
+script:
+   - mkdir ShortStory
+   - touch KKK
+   - echo 5
+
+#after script
   #after sucess
   #after failure
-
-#deploy phase
-  #before deploy
-  #deploy
-deploy:  
+before_deploy: echo start
+deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   keep_history: true
   on:
-    branch: main
-  #after deploy
-
-  
-
+   branch: master
+after_deploy: echo 50
