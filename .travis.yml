@@ -41,13 +41,5 @@ deploy:
     branch: main
   #after deploy
 
-#safelist
-branches:
-  only: 
-  - main
-#blocklist  
-  except:
-  - opt
-#regular expresions can be used too  like - /[upt][a-q]*[t]\b//
   
 
