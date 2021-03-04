@@ -1,0 +1,50 @@
+language: python
+python:
+- 3.8
+
+
+#git:
+#  depth: 5
+
+
+#installation phase
+  #before install
+  #install
+ install:
+ - pip install -r requirements.txt
+ 
+
+#script phase
+  #before script
+  #script
+  script: 
+  - mkdir shortstory
+  - cd shortstory
+  - touch KKK
+  - echo "It seems it works!"
+  
+  #after script
+  
+#after script phase 
+  #after sucess
+  #after failure
+
+#deploy phase
+  #before deploy
+  #deploy
+  #after deploy
+
+#safelist
+branches:
+  only: 
+  - main
+#blocklist  
+  except:
+  - opt
+#regular expresions can be used too  like - /[upt][a-q]*[t]\b//
+  
+env:
+  - QA
+  - PROD
+
+#update nr 6
