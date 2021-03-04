@@ -1,0 +1,25 @@
+language: python
+python:
+- 3.4
+
+#script
+  #before_script
+  #script
+  
+script:
+   - mkdir ShortStory
+   - touch KKK
+   - echo 5
+
+#after script
+  #after sucess
+  #after failure
+before_deploy: echo start
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+   branch: main
+after_deploy: echo 50
