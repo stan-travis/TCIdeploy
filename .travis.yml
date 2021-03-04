@@ -32,6 +32,13 @@ python:
 #deploy phase
   #before deploy
   #deploy
+deploy:  
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: main
   #after deploy
 
 #safelist
@@ -43,8 +50,4 @@ branches:
   - opt
 #regular expresions can be used too  like - /[upt][a-q]*[t]\b//
   
-env:
-  - QA
-  - PROD
 
-#update nr 6
